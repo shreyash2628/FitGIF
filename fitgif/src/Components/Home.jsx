@@ -90,14 +90,14 @@
 // export default Home
 
 import React from 'react';
-import HeroSectionForMobileScreen from './MobileDeviceScreens/HeroSectionForMobileScreen';
+import HeroSection from './HeroSection';
 
 const Home = () => {
   return (
     <div>
-      <HeroSectionForMobileScreen/>
+      <HeroSection/>
     </div>
   )
 }
 
-export default Home
+export default Home;

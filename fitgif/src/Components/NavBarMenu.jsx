@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const NavBarMenuForMobileScreen = () => {
+const NavBarMenu = () => {
   return (
     <div>
         <div >
@@ -17,4 +17,4 @@ const NavBarMenuForMobileScreen = () => {
   )
 }
 
-export default NavBarMenuForMobileScreen
+export default NavBarMenu;

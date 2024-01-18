@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import NavBarMenuForMobileScreen from "./MobileDeviceScreens/NavBarMenuForMobileScreen";
+import NavBarMenu from "./NavBarMenu";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
         className="absolute top-full left-0 ml-2 w-48 bg-white z-10 border-4"
         style={{ display: showMenu ? "block" : "none" }}
       >
-          <NavBarMenuForMobileScreen />
+          <NavBarMenu />
         </div>
       )}
     </div>

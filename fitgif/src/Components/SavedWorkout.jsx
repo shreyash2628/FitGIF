@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SavedWorkoutForMobileScreen = () => {
+const SavedWorkout = () => {
   return (
     <div>
       <h1>Saved</h1>
@@ -8,4 +8,4 @@ const SavedWorkoutForMobileScreen = () => {
   )
 }
 
-export default SavedWorkoutForMobileScreen
+export default SavedWorkout;

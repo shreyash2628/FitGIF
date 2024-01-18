@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BrowseWorkoutForMobileScreen from "./BrowseWorkoutForMobileScreen";
-import SavedWorkoutForMobileScreen from "./SavedWorkoutForMobileScreen";
+import BrowseWorkout from "./BrowseWorkout";
+import SavedWorkout from "./SavedWorkout";
 
-const HeroSectionForMobileScreen = () => {
+const HeroSection = () => {
   const [browseWorkoutButtonSelected, setBrowseWorkoutButtonSelected] =
     useState(false);
   const [savedWorkoutButtonSelected, setSavedWorkoutButtonSelected] =
@@ -19,9 +19,9 @@ const HeroSectionForMobileScreen = () => {
   return (
     <div>
       <div className="h-12  w-screen ">
-        <div className="mx-4 p-4 flex justify-between">
+        <div className="mx-4 p-4 flex justify-between md:justify-center ">
           <button
-            className="underline"
+            className="underline   sm:text-xl sm:font-bold sm:mx-14  md:mx-14  md:text-2xl md:font-extrabold"
             onClick={handleBrowseWorkoutButton}
             style={{
               textDecoration: browseWorkoutButtonSelected
@@ -31,7 +31,7 @@ const HeroSectionForMobileScreen = () => {
           >
             Browse Workout
           </button>
-          <button
+          <button className="  sm:text-xl sm:font-bold sm:mx-14  md:mx-14  md:text-2xl md:font-extrabold"
             onClick={handleSavedWorkoutButton}
             style={{
               textDecoration: savedWorkoutButtonSelected ? "underline" : "none",
@@ -41,14 +41,13 @@ const HeroSectionForMobileScreen = () => {
           </button>
         </div>
 
-
       </div>
-      <div className="w-screen h-screen border-4">
+      <div className="w-screen p-8 h-screen border-4 sm:w-screen sm:h-screen sm:p-14 md:w-screen md:h-screen md:p-16 lg:w-screen lg:h-screen lg:p-18">
         
-        {browseWorkoutButtonSelected?<BrowseWorkoutForMobileScreen/>:<SavedWorkoutForMobileScreen/>}
+        {browseWorkoutButtonSelected?<BrowseWorkout/>:<SavedWorkout/>}
         </div>
     </div>
   );
 };
 
-export default HeroSectionForMobileScreen;
+export default HeroSection;
