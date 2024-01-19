@@ -7,6 +7,7 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Home from './Components/Home';
 import ExerciseDetails from './Components/ExerciseDetails';
 import CaloriesTracker from './Components/CaloriesTracker';
+import WorkoutPlan from './Components/WorkoutPlan';
 
 
 const appRouter = createBrowserRouter([
@@ -24,6 +25,9 @@ const appRouter = createBrowserRouter([
       },{
         path:'/caloriesTracker',
         element:<CaloriesTracker/>
+      },{
+        path:'/workoutPlan',
+        element:<WorkoutPlan/>
       }
     ]
   }
