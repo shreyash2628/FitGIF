@@ -19,9 +19,9 @@ const HeroSection = () => {
   return (
     <div>
       <div className="h-12  w-screen ">
-        <div className="mx-4 p-4 flex justify-between md:justify-center ">
+        <div className="mx-4 p-4 flex justify-between md:justify-center  ">
           <button
-            className="underline   sm:text-xl sm:font-bold sm:mx-14  md:mx-14  md:text-2xl md:font-extrabold"
+            className="underline   rounded-lg sm:text-xl sm:font-bold sm:mx-14  md:mx-14  md:text-2xl md:font-extrabold"
             onClick={handleBrowseWorkoutButton}
             style={{
               textDecoration: browseWorkoutButtonSelected

@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Home from './Components/Home';
 import ExerciseDetails from './Components/ExerciseDetails';
-import CaloriesTracker from './Components/CaloriesTracker';
+import HealthTracker from './Components/HealthComponents/HealthTracker';
 import WorkoutPlan from './Components/WorkoutPlan';
 
 
@@ -24,7 +24,7 @@ const appRouter = createBrowserRouter([
         element:<ExerciseDetails/>
       },{
         path:'/caloriesTracker',
-        element:<CaloriesTracker/>
+        element:<HealthTracker/>
       },{
         path:'/workoutPlan',
         element:<WorkoutPlan/>

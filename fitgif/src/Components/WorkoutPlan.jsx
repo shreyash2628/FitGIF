@@ -3,7 +3,7 @@ import downicon from '../Assets/down.png';
 import MuscleGroupDropDown from './DropDowns/MuscleGroupDropDown';
 import EquipmentDropDown from './DropDowns/EquipmentDropDown';
 import LocationDropDown from './DropDowns/LocationDropDown';
-import { WorkoutPlannerOptions,WorkOutPLannerUrl } from '../Utils/Api';
+import { WorkoutPlannerApiOptions,WorkOutPLannerApiUrl } from '../Utils/Api';
 
 import GeneratedWorkoutPlan from './GeneratedWorkoutPlan';
 
@@ -13,7 +13,7 @@ const WorkoutPlan = () => {
     const [showEquipmentDropDown, setShowEquipmentDropDown] = useState(false);
     const [showLocation, setShowLocation] = useState(false);
 
-    const [showGeneratedWorkout, setShowGeneratedWorkout] = useState(true);
+    const [showGeneratedWorkout, setShowGeneratedWorkout] = useState(false);
 
     const [workOutPlannerApiData , setWorkOutPlannerApiData] = useState('');
 
@@ -41,7 +41,7 @@ const WorkoutPlan = () => {
         // setShowTime(!showTime);
         setShowGeneratedWorkout(true);
 
-        const response = await fetch(WorkOutPLannerUrl,WorkoutPlannerOptions);
+        const response = await fetch(WorkOutPLannerApiUrl,WorkoutPlannerApiOptions);
         const result =await response.json();
             setWorkOutPlannerApiData(result);
     };
