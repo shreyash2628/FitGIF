@@ -2,8 +2,9 @@ import React from 'react'
 
 const SavedWorkout = () => {
   return (
-    <div>
-      <h1>Saved</h1>
+    <div className='flex bg-green-300 h-screen overflow-y-scroll flex-col '>
+
+    
     </div>
   )
 }

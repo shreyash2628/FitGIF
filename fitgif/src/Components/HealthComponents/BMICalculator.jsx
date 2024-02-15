@@ -44,7 +44,7 @@ const BMICalculator = () => {
     };
 
     return (
-        <div className='border border-black bg-slate-200 h-auto flex flex-col pt-2 w-full'>
+        <div className='border border-black bg-slate-200 h-screen flex flex-col pt-2 w-full'>
             <div className='flex flex-col mx-auto justify-center p-2 '>
                 <input placeholder='Enter age' value={age} className='p-2 rounded-md shadow-xl' onChange={(e) => setAge(e.target.value)}></input>
                 {
@@ -70,7 +70,7 @@ const BMICalculator = () => {
             {
                 showGauge ?
                     <GaugeComponent
-                        value={BmiValue/100}
+                        value={BmiValue}
                         type="radial"
                         labels={{
                             tickLabels: {
@@ -95,7 +95,7 @@ const BMICalculator = () => {
                             animationDelay: 0
                         }}
                         className="lg:w-1/2 sm:w-full mx-auto"  // Adjust the width for large screens
-                        style={{ height: "200px" }}    // Set a fixed height for the component
+                        style={{ height: "200px" }}    
                     />
                     : <></>
             }

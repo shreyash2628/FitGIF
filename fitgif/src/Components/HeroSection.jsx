@@ -18,7 +18,12 @@ const HeroSection = () => {
   };
   return (
     <div>
+      <div className="w-screen ">
+
+      </div>
       <div className="h-12  w-screen ">
+
+        
         <div className="mx-4 p-4 flex justify-between md:justify-center  ">
           <button
             className="underline   rounded-lg sm:text-xl sm:font-bold sm:mx-14  md:mx-14  md:text-2xl md:font-extrabold"

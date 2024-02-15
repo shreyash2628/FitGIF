@@ -3,7 +3,7 @@ import BMICalculator from './BMICalculator';
 
 const HealthTracker = () => {
   return (
-    <div className='border border-black w-full h-screen flex flex-col'>
+    <div className='border border-black w-full h-full flex flex-col'>
       <BMICalculator/>
 
       
