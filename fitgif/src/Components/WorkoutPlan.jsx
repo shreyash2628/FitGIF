@@ -47,11 +47,15 @@ const WorkoutPlan = () => {
     };
 
     return (
-        <div className='p-5 border border-4 w-screen h-screen bg-slate-800'>
+        <div className='p-5 border border-4 w-screen h-screen '>
             <div className='bg-white h-auto flex flex-col'>
                 <h1 className='flex justify-center pt-2 pb-2'>Create Workout Plan</h1>
 
-                <div className='bg-white w-auto h-auto m-2 flex flex-col sm:px-24  md:px-36 lg:px-96'>
+               
+               
+
+                 {
+                    showGeneratedWorkout?<GeneratedWorkoutPlan workOutPlannerApiData={workOutPlannerApiData} setShowGeneratedWorkout={setShowGeneratedWorkout}/>: <div className='bg-white w-auto h-auto m-2 flex flex-col sm:px-24  md:px-36 lg:px-96'>
                     {/* select muscle  */}
                     <h1 className=' mt-5 mb-1'>Select Muscle </h1>
                     <div className='flex flex-row border border-black bg-red-400  h-7  lg:h-10 '>
@@ -68,10 +72,10 @@ const WorkoutPlan = () => {
                     {/* Equipment */}
                     <h1 className=' mt-5 mb-1'>Select Equipment </h1>
 
-                    <div className='flex flex-row border border-black bg-red-400  h-7 lg:h-10'>
-                        <input className=' px-2 w-full ' placeholder='Equipments' value={selectedEquipment}>
+                    <div className='flex flex-row border  border-black   h-7 lg:h-10'>
+                        <input className=' px-2 w-full  ' placeholder='Equipments' value={selectedEquipment}>
                         </input>
-                        <img src={downicon} className='w-5 lg:w-7 bg-white' alt="" onClick={handleOnDownArrowClickForEquipment} />
+                        <img src={downicon} className='w-5 lg:w-7  bg-white' alt="" onClick={handleOnDownArrowClickForEquipment} />
                     </div>
                     {
                         showEquipmentDropDown?<EquipmentDropDown setSelectedEquipment={setSelectedEquipment} setShowEquipmentDropDown={setShowEquipmentDropDown}/>:<></>
@@ -102,9 +106,6 @@ const WorkoutPlan = () => {
                     </button>
 
                 </div>
-
-                 {
-                    showGeneratedWorkout?<GeneratedWorkoutPlan workOutPlannerApiData={workOutPlannerApiData}/>:<></>
                  }       
 
             </div>

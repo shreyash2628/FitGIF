@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import Down from '../Assets/down.png';
+import LeftArrow from '../Assets/arrow.png';
 import { useState } from 'react';
 
 import { WorkoutPlannerOptions, WorkOutPLannerUrl } from '../Utils/Api';
 
-const GeneratedWorkoutPlan = ({ workOutPlannerApiData }) => {
+const GeneratedWorkoutPlan = ({ workOutPlannerApiData ,setShowGeneratedWorkout}) => {
 
     const [openWarmUpSection, setOpenWarmUpSection] = useState(false);
     const [openMainExercisesSection, setOpenMainExercisesSection] = useState(false);
@@ -19,11 +20,15 @@ const GeneratedWorkoutPlan = ({ workOutPlannerApiData }) => {
     //         console.log(result);
     // },[]);
     console.log(workOutPlannerApiData);
-
+const handleBackArrowButton = ()=>{
+    setShowGeneratedWorkout(false);
+}
     return (
 
         <div className='text-black  p-2 h-auto'>
-            <div className='h-1 bg-black  border border-black'></div>
+            <button className='h-4  ' onClick={handleBackArrowButton}>
+                    <img src={LeftArrow} className='h-full'/>
+            </button>
 
             <div className='h-6 border  mt-3 flex flex-row justify-between px-2' onClick={() => setOpenWarmUpSection(!openWarmUpSection)}>
                 <h3 className=''> Warm-Up</h3>
@@ -40,7 +45,7 @@ const GeneratedWorkoutPlan = ({ workOutPlannerApiData }) => {
                     </div>
                 ))
             )
-                    : <></>
+                : <></>
             }
 
 

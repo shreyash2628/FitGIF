@@ -10,6 +10,7 @@ const BrowseWorkout = () => {
   const[savedExercises,setSavedExercises] = useState({});
 
   const [exerciseData, setExerciseData] = useState([]);
+  sessionStorage.setItem('exerciseData', null);
 
   const handleSearchButton = () => {
     console.log("searched key", searchContent)
@@ -19,11 +20,20 @@ const BrowseWorkout = () => {
   }
 
   const searchExercise = async (searchContent) => {
-    const url = `https://exercisedb.p.rapidapi.com/exercises/name/${searchContent}?limit=10`;
-    const data = await fetch(url, ExerciseDbOptions);
-    const jsonData = await data.json();
-    setExerciseData(jsonData);
-    console.log(url);
+    if(!sessionStorage.getItem('exerciseData'))
+    {
+      console.log("Null hai Fetch krra hu");
+      sessionStorage.setItem('exerciseData',1)
+    }else{
+      console.log("Null nahi hai storage se le rha hu");
+    }
+    // const url = `https://exercisedb.p.apidapi.com/exercises/name/${searchContent}?limit=10`;
+    // const data = await fetch(url, ExerciseDbOptions);
+    // const jsonData = await data.json();
+    // setExerciseData(jsonData);
+    // sessionStorage.setItem('exerciseData', JSON.stringify(jsonData));
+    // console.log(url);
+    // console.log(jsonData);
   }
 
   const handleOnClickCard = (index) =>{
