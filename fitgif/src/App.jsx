@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
+import Home from "./Components/Exercise";
 import {Outlet} from 'react-router-dom';
+import Homepage from "./Components/Homepage";
 
 //virtual trainer
 //suggest exercise

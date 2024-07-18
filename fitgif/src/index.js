@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import Home from './Components/Home';
-import ExerciseDetails from './Components/ExerciseDetails';
+import Exercise from './Components/Exercise';
 import HealthTracker from './Components/HealthComponents/HealthTracker';
 import WorkoutPlan from './Components/WorkoutPlan';
+import Homepage from './Components/Homepage';
 
 
 const appRouter = createBrowserRouter([
@@ -16,12 +16,13 @@ const appRouter = createBrowserRouter([
     element:<App/>,
     children:[
       {
-        path:'/home',
-        element:<Home/>
+        path:'/',
+        element:<Homepage/>
       },
+    
       {
         path:'/exerciseDetails',
-        element:<ExerciseDetails/>
+        element:<Exercise/>
       },{
         path:'/caloriesTracker',
         element:<HealthTracker/>

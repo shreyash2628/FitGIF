@@ -20,17 +20,18 @@ const BrowseWorkout = () => {
   }
 
   const searchExercise = async (searchContent) => {
-    if(!sessionStorage.getItem('exerciseData'))
-    {
-      console.log("Null hai Fetch krra hu");
-      sessionStorage.setItem('exerciseData',1)
-    }else{
-      console.log("Null nahi hai storage se le rha hu");
-    }
-    // const url = `https://exercisedb.p.apidapi.com/exercises/name/${searchContent}?limit=10`;
-    // const data = await fetch(url, ExerciseDbOptions);
-    // const jsonData = await data.json();
-    // setExerciseData(jsonData);
+    // if(!sessionStorage.getItem('exerciseData'))
+    // {
+    //   console.log("Null hai Fetch krra hu");
+    //   sessionStorage.setItem('exerciseData',1)
+    // }else{
+    //   console.log("Null nahi hai storage se le rha hu");
+    // }
+    const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${searchContent}?limit=10&offset=0`;
+    const data = await fetch(url, ExerciseDbOptions);
+    const jsonData = await data.json();
+    console.log(data);
+    setExerciseData(jsonData);
     // sessionStorage.setItem('exerciseData', JSON.stringify(jsonData));
     // console.log(url);
     // console.log(jsonData);
@@ -46,7 +47,7 @@ const BrowseWorkout = () => {
 
 
   return (
-    <div className=" h-screen ">
+    <div className=" h-min-screen ">
       <div className="h-8 w-screen mx-4 sm:flex sm:justify-center md:justify-center md:flex lg:h-14 lg:w-full ">
         <input
           type="search"

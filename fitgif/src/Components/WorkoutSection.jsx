@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BrowseWorkout from "./BrowseWorkout";
 import SavedWorkout from "./SavedWorkout";
 
-const HeroSection = () => {
+const WorkoutSection = () => {
   const [browseWorkoutButtonSelected, setBrowseWorkoutButtonSelected] =
     useState(false);
   const [savedWorkoutButtonSelected, setSavedWorkoutButtonSelected] =
@@ -55,4 +55,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default WorkoutSection;

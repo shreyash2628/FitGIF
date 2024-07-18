@@ -21,7 +21,8 @@ export const BmiApiOptions = {
 export const ExerciseDbOptions = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '2e103b104emsh0be9fb60757904dp1d702ajsnfb9d0f6dbdce',
-		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+		'x-rapidapi-key': '2e103b104emsh0be9fb60757904dp1d702ajsnfb9d0f6dbdce',
+		'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
 	}
 };
+

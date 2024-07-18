@@ -20,6 +20,7 @@ const GeneratedWorkoutPlan = ({ workOutPlannerApiData ,setShowGeneratedWorkout})
     //         console.log(result);
     // },[]);
     console.log(workOutPlannerApiData);
+
 const handleBackArrowButton = ()=>{
     setShowGeneratedWorkout(false);
 }
@@ -37,11 +38,11 @@ const handleBackArrowButton = ()=>{
 
 
             {openWarmUpSection ? (
-                workOutPlannerApiData.Exercises.map((info, index) => (
-                    <div key={index} className='h-6 border mt-3 flex flex-col justify-between px-2'>
-                        <h1>{info.Exercise}</h1>
-                        <h1>{info.Reps}</h1>
-                        <h1>{info.Sets}</h1>
+                workOutPlannerApiData.Exercise.map((info, index) => (
+                    <div key={index} className='h-auto border bg-gray-300 mt-3 flex flex-col justify-between px-2'>
+                        <h1 className='font-bold text-xl'>{info.Exercise}</h1>
+                        <h1>Reps-{info.Reps}</h1>
+                        <h1>Sets-{info.Sets}</h1>
                     </div>
                 ))
             )

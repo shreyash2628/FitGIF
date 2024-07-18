@@ -90,14 +90,14 @@
 // export default Home
 
 import React from 'react';
-import HeroSection from './HeroSection';
+import WorkoutSection from './WorkoutSection';
 
-const Home = () => {
+const Exercise = () => {
   return (
     <div>
-      <HeroSection/>
+      <WorkoutSection/>
     </div>
   )
 }
 
-export default Home;
+export default Exercise;
